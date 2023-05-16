@@ -14,7 +14,7 @@ public class SEEController {
 
     @GetMapping("/sse")
     public SseEmitter handleSse() {
-        SseEmitter emitter = new SseEmitter(300_000L);
+        SseEmitter emitter = new SseEmitter(300_000L);// define a conexão e o time out no caso 300000ms
         emitters.add(emitter);
 
         // Remove o emitter quando a conexão é fechada
@@ -25,6 +25,7 @@ public class SEEController {
     }
     @GetMapping("/abc")
     public void test(){
+        //envia mensagem para todos
         sendToAll("testestestes");
     }
 
