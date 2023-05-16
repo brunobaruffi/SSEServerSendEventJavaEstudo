@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-//ajuste de erros de corse
+//ajuste de erros de cors
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
